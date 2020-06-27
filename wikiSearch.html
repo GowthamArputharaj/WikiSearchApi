@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- code.jquery.com and uncompressed file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- include jQuery library file here -->
+    <script src="../Storage/libraryFiles/jquery.min.js"></script>
+
+    <!-- Google jQuery source code link C D N -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- include Bootstrap library -->
+    <link rel="stylesheet" href="../Storage/libraryFiles/bootstrap.min.css">
+
+    <source src="../Storage/libraryFiles/bootstrap.min.js" type="">
+
+    <!-- css include file -->
+    <link rel="stylesheet" href="wikiSearch.css">
+
+    <!-- js include file -->
+    <script src="wikiSearch.js"></script>
+
+    <title>Wiki Search</title>
+
+</head>
+<body>
+    <header class="hea d-none">
+        <input type="text" name='queryh' class='qh col-12 col-md-10 py-2 text-center text-success border-primary' placeholder='Enter the query here ...'>
+        <input type="text" name='numberh' class='qh col-12 col-md-2 py-2 text-center text-success border-primary' placeholder='Enter Number of query here ...'>
+        <input type="button" class='col-12 col-offset-1  btn btn-primary' id='searchh' value='Search Wiki'>
+    </header>
+
+    <div class="jumbo">
+        <!-- <p>Jumbo</p> -->
+        <input type="button" value="Toggle SearchBar" class="btn btn-danger sticky-bottom" id='toggle'>
+    </div>
+    
+    <footer class="foo">
+        <input type="text" name='queryf' class='qf col-12 col-md-10 py-2 text-center text-success border-primary' placeholder='Enter the query here ...'>
+        <input type="text" name='numberf' class='qf col-12 col-md-2 py-2 text-center text-success border-primary' placeholder='Enter Number of query here ...'>
+        <input type="button" class='col-12 col-offset-1  btn btn-primary' id='searchf' value='Search Wiki'>
+    </footer>
+</body>
+</html>

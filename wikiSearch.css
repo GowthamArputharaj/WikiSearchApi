@@ -1,0 +1,42 @@
+body, html {
+    padding: 0;
+    margin: 1rem;
+    
+}
+
+.foo {
+    background: #ccc;
+    position: sticky;
+    bottom: 1rem;
+    margin: auto;
+    width: 100%;
+}
+
+.hea {
+    background: #ccc;
+    position: sticky;
+    top: 1rem;
+    margin: auto;
+    width: 100%;
+}
+
+.jumbotron {
+    background: #ccc;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input[name=numberh], input[name=numberf] {
+    float: right;
+}
+
+
+
+
+
