@@ -1,3 +1,16 @@
+$(document).ready(pattern());
+
+
+function pattern(){
+  
+  console.log('               ________                   __   .__                       '); 
+  console.log('              /  _____/   ____ __  _  ___/  |_ |  |__  _____     _____   ');
+  console.log('             /   \\  ___  /  _ \\\\ \\/ \\/ /\\   __\\|  |  \\ \\__  \\   /     \\  ');
+  console.log('             \\    \\_\\  \\(  <_> )\\     /  |  |  |   Y  \\ / __ \\_|  Y Y  \\ ');
+  console.log('              \\______  / \\____/  \\/\\_/   |__|  |___|  /(____  /|__|_|  / ');
+  console.log('                     \\/                             \\/      \\/       \\/  ');
+
+}
 
 var ob;
 const Http = new XMLHttpRequest();
@@ -6,19 +19,19 @@ var q = 'Gowtham'
 main(n , q);
 
 function main(nor, qry) {
-    console.log(nor, qry)
+    // console.log(nor, qry)
     var nor;
     var qry;
     this.nor = nor
     this.qry = qry
-    // const url='https://jsonplaceholder.typicode.com/posts';
-    const url='https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit='+this.nor+'&srsearch='+this.qry+'&format=json';
+    
+    const url='https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit='+this.nor+'&srsearch='+this.qry+'&format=json';
+    
     Http.open("GET", url);
     Http.send();
-    console.log(url)
 
     Http.onload = (e) => {
-    // console.log(Http.response)
+    // console.log(Http.getAllResponseHeaders())
     ar = Http.responseText
     var s = ar
     // console.log(Http.responseText, e)
@@ -26,7 +39,6 @@ function main(nor, qry) {
     var source = JSON.parse(Http.responseText)
 
     var ele = document.getElementsByTagName('td')
-    console.log(source,'sourCe')
 
     parseit(source)
     }
@@ -34,8 +46,8 @@ function main(nor, qry) {
 
 
 function parseit(resp) {
-    console.log('inside parseit')
-    resp.query.search.forEach(v => console.log(v))
+    // console.log('inside parseit')
+    // resp.query.search.forEach(v => console.log(v))
     var len = resp.query.search.length
     for(let i = 0; i< len; i++) {
         var ch = resp.query.search[i]['title'];
@@ -49,20 +61,20 @@ function parseit(resp) {
 
 $(document).on('click', '#toggle', function(){
     if($('header').hasClass('d-none')) {
-        console.log('header toggle')
+        // console.log('header toggle')
         $('header').removeClass('d-none')
         $('header').addClass('hea')
 
-        console.log('hea toggle')
+        // console.log('hea toggle')
         $('footer').removeClass('foo')
         $('footer').addClass('d-none')
         
     } else if($('footer').hasClass('d-none')) {
-        console.log('footer toggle')
+        // console.log('footer toggle')
         $('footer').addClass('foo')
         $('footer').removeClass('d-none')
         
-        console.log('foo toggle')
+        // console.log('foo toggle')
         $('header').removeClass('hea')
         $('header').addClass('d-none')
 
@@ -75,19 +87,19 @@ function initiatorh() {
     var q = $("input[name=queryh]").val();
     var n = $("input[name=numberh]").val();
     if(n == '' && q == '') {
-        console.log('both not')
+        // console.log('both not')
         main(10, 'Bharat')
     } else if(q == '') {
-        console.log('q not')
+        // console.log('q not')
         main(n, 'Bharat')
     } else if(n == '') {
-        console.log('n not')
+        // console.log('n not')
         main(10, q)
     } else {
-        console.log('both are present')
+        // console.log('both are present')
         main(n, q)
     }
-    console.log('text okay', n, q)
+    // console.log('text okay', n, q)
 }
 
 function initiatorf() {
@@ -96,19 +108,19 @@ function initiatorf() {
     var q = $("input[name=queryf]").val();
     var n = $("input[name=numberf]").val();
     if(n == '' && q == '') {
-        console.log('both not')
+        // console.log('both not')
         main(10, 'Bharat')
     } else if(q == '') {
-        console.log('q not')
+        // console.log('q not')
         main(n, 'Bharat')
     } else if(n == '') {
-        console.log('n not')
+        // console.log('n not')
         main(10, q)
     } else {
-        console.log('both are present')
+        // console.log('both are present')
         main(n, q)
     }
-    console.log('text okay', n, q)
+    // console.log('text okay', n, q)
 }
 
 $(document).on('click', '#searchh', function(){
